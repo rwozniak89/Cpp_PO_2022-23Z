@@ -153,9 +153,15 @@ class Samochod : public Pojazd, public Silnik {
 public:
     string model;
 
-    //relacja 1 do 1 - agregacja/kompozycja
+    ////relacja 1 do 1 - agregacja/kompozycja
     //SilnikElektryczny silniczek;
     SilnikElektryczny* silniczek;
+    /////relacja 1 do 2
+    //SilnikElektryczny* silniczek2;
+    //SilnikElektryczny* silniczek3;
+    ////relacja 1 do n
+    //Pojazd* tablica[] /// vecctor, list, wlasnaLista...
+
 
     Samochod()
     {
