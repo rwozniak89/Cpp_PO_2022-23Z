@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1668544119 source:c:\projects\cpp_po_2022-23z_execise\mojalista\main.cpp
+	<iostream>
+	"List.h"
+
+1668544108 source:c:\projects\cpp_po_2022-23z_execise\mojalista\src\list.cpp
+	"List.h"
+	<iostream>
+
+1668533271 c:\projects\cpp_po_2022-23z_execise\mojalista\include\list.h
+	"ListElement.h"
+
+1668533273 c:\projects\cpp_po_2022-23z_execise\mojalista\include\listelement.h
+
+1668533277 source:c:\projects\cpp_po_2022-23z_execise\mojalista\src\listelement.cpp
+	"ListElement.h"
+
+1668533357 source:c:\projects\cpp_po_2022-23z_execise\mojalista\src\mylist.cpp
+	"MyList.h"
+	<iostream>
+
+1668533368 c:\projects\cpp_po_2022-23z_execise\mojalista\include\mylist.h
+

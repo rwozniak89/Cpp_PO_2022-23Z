@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1668533357 source:c:\projects\cpp_po_2022-23z_execise\roznekolekcje\src\mylist.cpp
+	"MyList.h"
+	<iostream>
+
+1668533368 c:\projects\cpp_po_2022-23z_execise\roznekolekcje\include\mylist.h
+
+1668619692 source:c:\projects\cpp_po_2022-23z_execise\roznekolekcje\main.cpp
+	<iostream>
+	<time.h>
+	"MyList.h"
+	"MyClass.h"
+	<list>
+	<vector>
+	<algorithm>
+
+1668535341 c:\projects\cpp_po_2022-23z_execise\roznekolekcje\include\c.h
+
+1668540533 c:\projects\cpp_po_2022-23z_execise\roznekolekcje\include\myclass.h
+
