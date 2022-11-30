@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1669825218 source:c:\projects\cpp_po_2022-23z\lab4\postacie\class model\tarcza.cpp
+	"Tarcza.h"
+
+1669825218 c:\projects\cpp_po_2022-23z\lab4\postacie\class model\tarcza.h
+
+1669828365 source:c:\projects\cpp_po_2022-23z\lab4\postacie\main.cpp
+	<iostream>
+	"Class Model/Postac.h"
+	"Class Model/Przedmiot.h"
+
+1669826698 source:c:\projects\cpp_po_2022-23z\lab4\postacie\class model\bron.cpp
+	"Bron.h"
+
+1669826693 c:\projects\cpp_po_2022-23z\lab4\postacie\class model\bron.h
+	"Przedmiot.h"
+
+1669826673 c:\projects\cpp_po_2022-23z\lab4\postacie\class model\przedmiot.h
+	<iostream>
+	"rodzajPrzedmiotu.h"
+
+1669826583 c:\projects\cpp_po_2022-23z\lab4\postacie\class model\rodzajprzedmiotu.h
+
+1669828193 source:c:\projects\cpp_po_2022-23z\lab4\postacie\class model\plecak.cpp
+	"Plecak.h"
+	<iostream>
+
+1669828023 c:\projects\cpp_po_2022-23z\lab4\postacie\class model\plecak.h
+	"Przedmiot.h"
+	<vector>
+
+1669827380 source:c:\projects\cpp_po_2022-23z\lab4\postacie\class model\przedmiot.cpp
+	"Przedmiot.h"
+
+1669825218 source:c:\projects\cpp_po_2022-23z\lab4\postacie\class model\czarodziej.cpp
+	"Czarodziej.h"
+
+1669825218 c:\projects\cpp_po_2022-23z\lab4\postacie\class model\czarodziej.h
+	"Postac.h"
+
+1669828307 c:\projects\cpp_po_2022-23z\lab4\postacie\class model\postac.h
+	"Plecak.h"
+	"Bron.h"
+
+1669828296 source:c:\projects\cpp_po_2022-23z\lab4\postacie\class model\postac.cpp
+	"Postac.h"
+
+1669825218 source:c:\projects\cpp_po_2022-23z\lab4\postacie\class model\wojownik.cpp
+	"Wojownik.h"
+
+1669825218 c:\projects\cpp_po_2022-23z\lab4\postacie\class model\wojownik.h
+	"Postac.h"
+
