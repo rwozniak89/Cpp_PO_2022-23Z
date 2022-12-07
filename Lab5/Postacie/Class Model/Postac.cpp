@@ -114,6 +114,7 @@ int Postac::obliczPktAtaku(){
     {
         //if(rekaLewa->typ1 == 1)
         //if(rekaLewa->typ2 == rodzajPrzedmiotu.bron)
+         //to use dynamic_cast<Bron*>(rekaPrawa)) add-make A polymorphic, which you can do by adding a virtual destructor or any virtual function:
         if(auto* przedmiotBron = dynamic_cast<Bron*>(rekaLewa))
         {
             maxValue = przedmiotBron->atakMax;
