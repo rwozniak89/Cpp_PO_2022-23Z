@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Postacie" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Postacie" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Postacie" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Class Model/Bron.cpp" />
+		<Unit filename="Class Model/Bron.h" />
+		<Unit filename="Class Model/Czarodziej.cpp" />
+		<Unit filename="Class Model/Czarodziej.h" />
+		<Unit filename="Class Model/Plecak.cpp" />
+		<Unit filename="Class Model/Plecak.h" />
+		<Unit filename="Class Model/Postac.cpp" />
+		<Unit filename="Class Model/Postac.h" />
+		<Unit filename="Class Model/Przedmiot.cpp" />
+		<Unit filename="Class Model/Przedmiot.h" />
+		<Unit filename="Class Model/Tarcza.cpp" />
+		<Unit filename="Class Model/Tarcza.h" />
+		<Unit filename="Class Model/Wojownik.cpp" />
+		<Unit filename="Class Model/Wojownik.h" />
+		<Unit filename="Class Model/rodzajPrzedmiotu.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
