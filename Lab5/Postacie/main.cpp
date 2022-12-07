@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-    cout << "PostacieLab4!" << endl;
+    cout << "PostacieLab5!" << endl;
 
 
     Postac* postac1 = new Postac("Zbyszek", 5, 4, 20, 1);
