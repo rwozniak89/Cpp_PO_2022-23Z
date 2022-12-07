@@ -19,20 +19,24 @@ public:
 	virtual ~Postac();
 
 	Postac(string nazwa, int pktAtakuMax, int pktAtakuMin, int pktZycia, int poziom);
-	void czyZyje();
+	bool czyZyje();
 	void dodajDoPlecaka(Przedmiot* p);
 	void PokazStatystykiPostaci();
 	void przedstawSie();
-	void przywitajSie();
+	void przywitajSieZInnaOsoba(Postac* osoba);
 	void ustawBronLewa(Bron* bron);
 	void ustawBronPrawa(Bron* bron);
 	void wyswietlPlecak();
 	void zaatakuj(Postac* przeciwnik);
 	void zaprosDoWalki(Postac* osoba);
 
+	string  pobierzNazwe();
+
 protected:
 	void obliczPktAtaku();
-	void przyjmijObrazenia();
+	void przyjmijObrazenia(int pktObrazen);
+
+	string generujPrzywitanie();
 
 private:
 	string nazwa;

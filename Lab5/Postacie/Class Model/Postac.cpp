@@ -35,9 +35,20 @@ Postac::Postac(string nazwa, int pktAtakuMax, int pktAtakuMin, int pktZycia, int
     this->poziom = poziom;
 }
 
+string  Postac::pobierzNazwe(){
+    return nazwa;
+}
 
-void Postac::czyZyje(){
+bool Postac::czyZyje(){
 
+//    if(this->pktZycia > 0)
+//    {
+//        return true;
+//    }
+//    return false;
+
+//    return (this->pktZycia > 0) ? true : false;
+    return (this->pktZycia > 0);
 }
 
 
@@ -48,15 +59,13 @@ void Postac::dodajDoPlecaka(Przedmiot* p){
 }
 
 
-void Postac::obliczPktAtaku(){
 
-}
 
 
 void Postac::PokazStatystykiPostaci(){
 
-    cout << "Statystyki dla : Postac: " << this->nazwa
-    << ", pktAtakuMax: " << this->pktAtakuMax
+    cout << "###" << this->nazwa
+    << " (Statystyki): pktAtakuMax: " << this->pktAtakuMax
      << ", pktAtakuMin: " << this->pktAtakuMin
       << ", pktZycia: " << this->pktZycia
        << ", poziom: " << this->poziom
@@ -66,17 +75,53 @@ void Postac::PokazStatystykiPostaci(){
 
 void Postac::przedstawSie(){
 
-    cout << "Jestem " << this->nazwa <<endl;
+    cout <<this->nazwa << ": " <<  generujPrzywitanie() << ", jestem " << this->nazwa  << "!"<<endl;
 
 }
 
+string Postac::generujPrzywitanie(){
 
-void Postac::przyjmijObrazenia(){
+    string tablica[] = { "Dzien dobry", "Witaj", "Ahoj", "Czesc", "Guten tag..." };
+    int rozmiarTablicy = sizeof(tablica)/sizeof(string);
+
+    int liczbaLosowa = rand() % rozmiarTablicy;
+
+    return tablica[liczbaLosowa];
+}
+
+void Postac::zaatakuj(Postac* przeciwnik){
+
+    cout <<this->nazwa << ": "<< "Rozpoczyna atak na przeciwnika " << przeciwnik->nazwa << " !" << endl;
+
+    int obrazenia = 1;
+
+    przeciwnik->przyjmijObrazenia(obrazenia);
+
+
+
+    cout <<this->nazwa << ": "<< "Konczy atak na przeciwnika " << przeciwnik->nazwa << " !" << endl;
+}
+
+void Postac::obliczPktAtaku(){
 
 }
 
+void Postac::przyjmijObrazenia(int pktObrazen){
 
-void Postac::przywitajSie(){
+    cout <<this->nazwa << ": "<< "przyjmuje liczbe obrazen: " << pktObrazen << " !" << endl;
+    this->pktZycia -= pktObrazen;
+
+    if(this->pktZycia < 0){
+        this->pktZycia = 0;
+    }
+
+    this->PokazStatystykiPostaci();
+}
+
+
+void Postac::przywitajSieZInnaOsoba(Postac* osoba){
+
+    cout <<this->nazwa << ": "<< "Witam Ciebie " << osoba->nazwa << " ;)" << endl;
 
 }
 
@@ -96,11 +141,12 @@ void Postac::wyswietlPlecak(){
 }
 
 
-void Postac::zaatakuj(Postac* przeciwnik){
 
-}
 
 
 void Postac::zaprosDoWalki(Postac* osoba){
-
+    //potrzaebna klasa Ring, metody dodaj¹ce postacie do kolekcji w ringu, metoda przyjmujaca zaproszenie do walki...
+     cout <<this->nazwa << ": "<< "Zapraszam Ciebie " << osoba->nazwa << " do walki !!!! Statystyki: " << endl;
+     this->PokazStatystykiPostaci();
+     osoba->PokazStatystykiPostaci();
 }
