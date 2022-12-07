@@ -19,14 +19,16 @@ Bron::~Bron(){
 }
 
 
+Bron::Bron(string nazwa, int cena, int atakMin, int atakMax, int obrona, int wytrzymalosc)
+: Przedmiot(nazwa, cena), atakMin(atakMin),  atakMax(atakMax), obrona(obrona), wytrzymalosc(wytrzymalosc)
+{
 
-
-
-Bron::Bron(string nazwa, int cena, int atakMIn, int atakMax){
-
+    this->typ1 = 1;
+    this->typ2 = rodzajPrzedmiotu::bron;
 }
 
 
 void Bron::OpiszSie(){
+    cout<< "BRON: " << " nazwa: " << nazwa << " cena: " << cena << " atakMin: " << atakMin << " atakMax: " << atakMax << " obrona: " << obrona << " wytrzymalosc: " << wytrzymalosc << endl;
 
 }

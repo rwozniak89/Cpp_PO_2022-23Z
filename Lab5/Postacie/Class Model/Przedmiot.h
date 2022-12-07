@@ -24,13 +24,15 @@ public:
 	virtual ~Przedmiot();
 
 	Przedmiot(string nazwa, int cena);
-	void OpiszSie();
+	virtual void OpiszSie();
+
+	int typ1;
+	rodzajPrzedmiotu typ2;
 
 protected:
 	int cena;
 	string nazwa;
-	int typ1;
-	rodzajPrzedmiotu typ2;
+
 
 };
 #endif // !defined(EA_31961657_2AB5_4c66_A68F_9E4CDCF22770__INCLUDED_)

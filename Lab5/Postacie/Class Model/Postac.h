@@ -24,8 +24,8 @@ public:
 	void PokazStatystykiPostaci();
 	void przedstawSie();
 	void przywitajSieZInnaOsoba(Postac* osoba);
-	void ustawBronLewa(Bron* bron);
-	void ustawBronPrawa(Bron* bron);
+	void ustawBronLewa(Przedmiot* przedmiot);
+	void ustawBronPrawa(Przedmiot* przedmiotn);
 	void wyswietlPlecak();
 	void zaatakuj(Postac* przeciwnik);
 	void zaprosDoWalki(Postac* osoba);
@@ -33,7 +33,7 @@ public:
 	string  pobierzNazwe();
 
 protected:
-	void obliczPktAtaku();
+	int obliczPktAtaku();
 	void przyjmijObrazenia(int pktObrazen);
 
 	string generujPrzywitanie();
@@ -45,8 +45,8 @@ private:
 	int pktZycia;
 	Plecak* plecak;
 	int poziom;
-	Bron* rekaLewa;
-	Bron* rekaPrawa;
+	Przedmiot* rekaLewa;
+	Przedmiot* rekaPrawa;
 
 };
 #endif // !defined(EA_5D440618_964F_483f_AC68_EDFCD96A6091__INCLUDED_)

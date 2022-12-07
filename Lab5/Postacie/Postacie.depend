@@ -51,13 +51,13 @@
 1669825218 c:\projects\cpp_po_2022-23z\lab4\postacie\class model\wojownik.h
 	"Postac.h"
 
-1669826698 source:c:\projects\cpp_po_2022-23z\lab5\postacie\class model\bron.cpp
+1670430489 source:c:\projects\cpp_po_2022-23z\lab5\postacie\class model\bron.cpp
 	"Bron.h"
 
-1669826693 c:\projects\cpp_po_2022-23z\lab5\postacie\class model\bron.h
+1670432075 c:\projects\cpp_po_2022-23z\lab5\postacie\class model\bron.h
 	"Przedmiot.h"
 
-1669826673 c:\projects\cpp_po_2022-23z\lab5\postacie\class model\przedmiot.h
+1670432101 c:\projects\cpp_po_2022-23z\lab5\postacie\class model\przedmiot.h
 	<iostream>
 	"rodzajPrzedmiotu.h"
 
@@ -69,7 +69,7 @@
 1669825218 c:\projects\cpp_po_2022-23z\lab5\postacie\class model\czarodziej.h
 	"Postac.h"
 
-1670428692 c:\projects\cpp_po_2022-23z\lab5\postacie\class model\postac.h
+1670432487 c:\projects\cpp_po_2022-23z\lab5\postacie\class model\postac.h
 	"Plecak.h"
 	"Bron.h"
 
@@ -81,7 +81,7 @@
 	"Plecak.h"
 	<iostream>
 
-1670428779 source:c:\projects\cpp_po_2022-23z\lab5\postacie\class model\postac.cpp
+1670432577 source:c:\projects\cpp_po_2022-23z\lab5\postacie\class model\postac.cpp
 	"Postac.h"
 
 1669827380 source:c:\projects\cpp_po_2022-23z\lab5\postacie\class model\przedmiot.cpp
@@ -98,10 +98,9 @@
 1669825218 c:\projects\cpp_po_2022-23z\lab5\postacie\class model\wojownik.h
 	"Postac.h"
 
-1670428769 source:c:\projects\cpp_po_2022-23z\lab5\postacie\main.cpp
+1670431666 source:c:\projects\cpp_po_2022-23z\lab5\postacie\main.cpp
 	<iostream>
 	<time.h>
-	<unistd.h>
 	"Class Model/Postac.h"
 	"Class Model/Przedmiot.h"
 

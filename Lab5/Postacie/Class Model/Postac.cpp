@@ -6,7 +6,7 @@
 ///////////////////////////////////////////////////////////
 
 #include "Postac.h"
-
+//nclude "rodzajPrzedmiotu.h"
 
 Postac::Postac(){
 
@@ -93,7 +93,7 @@ void Postac::zaatakuj(Postac* przeciwnik){
 
     cout <<this->nazwa << ": "<< "Rozpoczyna atak na przeciwnika " << przeciwnik->nazwa << " !" << endl;
 
-    int obrazenia = 1;
+    int obrazenia = obliczPktAtaku();
 
     przeciwnik->przyjmijObrazenia(obrazenia);
 
@@ -102,7 +102,38 @@ void Postac::zaatakuj(Postac* przeciwnik){
     cout <<this->nazwa << ": "<< "Konczy atak na przeciwnika " << przeciwnik->nazwa << " !" << endl;
 }
 
-void Postac::obliczPktAtaku(){
+int Postac::obliczPktAtaku(){
+
+    int sumaPkt = 0;
+
+    int maxValue = this->pktAtakuMax;
+    int minValue = this->pktAtakuMin;
+    sumaPkt += minValue + (rand() % (maxValue - minValue));
+
+    if(rekaLewa != NULL)
+    {
+        //if(rekaLewa->typ1 == 1)
+        //if(rekaLewa->typ2 == rodzajPrzedmiotu.bron)
+        if(auto* przedmiotBron = dynamic_cast<Bron*>(rekaLewa))
+        {
+            maxValue = przedmiotBron->atakMax;
+            minValue = przedmiotBron->atakMin;
+            sumaPkt += minValue + (rand() % (maxValue - minValue));
+        }
+    }
+
+    if(rekaPrawa != NULL)
+    {
+        if(rekaPrawa->typ2 == rodzajPrzedmiotu::bron)
+        {
+            maxValue = ((Bron*)rekaPrawa)->atakMax;
+            minValue = ((Bron*)rekaPrawa)->atakMin;
+            sumaPkt += minValue + (rand() % (maxValue - minValue));
+        }
+    }
+
+    cout << "###" << this->nazwa << ": wygnerowano pktAtaku: " << sumaPkt << endl;
+    return sumaPkt;
 
 }
 
@@ -126,18 +157,27 @@ void Postac::przywitajSieZInnaOsoba(Postac* osoba){
 }
 
 
-void Postac::ustawBronLewa(Bron* bron){
+void Postac::ustawBronLewa(Przedmiot* przedmiot){
+
+    this->rekaLewa = przedmiot;
+    cout <<this->nazwa << ": "<< "rekaLewa ustawiono :";
+    przedmiot->OpiszSie();
 
 }
 
 
-void Postac::ustawBronPrawa(Bron* bron){
+void Postac::ustawBronPrawa(Przedmiot* przedmiot){
 
+    this->rekaPrawa = przedmiot;
+    cout <<this->nazwa << ": "<< " rekaPrawa ustawiono :";
+    przedmiot->OpiszSie();
 }
 
 
 void Postac::wyswietlPlecak(){
     plecak->wyswietl();
+
+    cout<< this->nazwa << ": koniec wyswietlania plecaka!" <<endl;
 }
 
 

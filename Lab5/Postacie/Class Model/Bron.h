@@ -17,12 +17,13 @@ public:
 	Bron();
 	virtual ~Bron();
 
-	Bron(string nazwa, int cena, int atakMIn, int atakMax);
+	Bron(string nazwa, int cena, int atakMin, int atakMax, int obrona, int wytrzymalosc);
 	void OpiszSie();
 
-private:
+public:
 	int atakMax;
 	int atakMin;
+	int obrona;
 	int wytrzymalosc;
 
 };
