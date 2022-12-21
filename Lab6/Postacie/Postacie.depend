@@ -138,14 +138,15 @@
 1669825218 c:\projects\cpp_po_2022-23z\lab6\postacie\class model\wojownik.h
 	"Postac.h"
 
-1671638003 c:\projects\cpp_po_2022-23z\lab6\postacie\class model\postac.h
+1671640972 c:\projects\cpp_po_2022-23z\lab6\postacie\class model\postac.h
 	"Plecak.h"
 	"Bron.h"
 
-1671637894 source:c:\projects\cpp_po_2022-23z\lab6\postacie\class model\postac.cpp
+1671641062 source:c:\projects\cpp_po_2022-23z\lab6\postacie\class model\postac.cpp
 	"Postac.h"
+	"Czarodziej.h"
 
-1671636868 source:c:\projects\cpp_po_2022-23z\lab6\postacie\main.cpp
+1671641239 source:c:\projects\cpp_po_2022-23z\lab6\postacie\main.cpp
 	<iostream>
 	<time.h>
 	"Class Model/Postac.h"

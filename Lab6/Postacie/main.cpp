@@ -88,6 +88,17 @@ int main()
 //
 //    postac1->zaatakuj(postac2);
 //    postac2->zaatakuj(postac1);
+
+    cout<< endl << "GENEROWANIE POSTACI I WALKA" << endl;
+
+    //metody fabrykujace, mozna podawac paramtey od uzytkonika....
+    postac1 = Postac::generujPostac();
+    postac2 = Postac::generujPostac();
+
+
+    postac1->wyswietlPlecak();
+    postac2->wyswietlPlecak();
+
     int licznikRund =1;
     while(postac1->czyZyje() && postac2->czyZyje())
     {

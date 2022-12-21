@@ -34,6 +34,9 @@ public:
 
 	virtual int atakZaawansowany();
 
+	static int losuj(int minValue, int maxValue);
+	static Postac* generujPostac();
+
 protected:
 	int obliczPktAtaku();
 	void przyjmijObrazenia(int pktObrazen);

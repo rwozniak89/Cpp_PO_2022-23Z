@@ -6,6 +6,8 @@
 ///////////////////////////////////////////////////////////
 
 #include "Postac.h"
+
+#include "Czarodziej.h"
 //nclude "rodzajPrzedmiotu.h"
 
 Postac::Postac(){
@@ -225,5 +227,81 @@ bool Postac::czyTrafion(int poziomPrzeciwnika){
             return true;
         }
         return false;
+}
+
+int Postac::losuj(int minValue, int maxValue){
+    return minValue + (rand() % (maxValue - minValue + 1));
+}
+
+Postac* Postac::generujPostac(){
+
+    cout << "$$$$$$$$ Generowanie Postaci - metoda fabrykujaca" << endl;
+
+    //(string nazwa, int pktAtakuMax, int pktAtakuMin, int pktZycia, int poziom){
+    //losowanie paramerow..
+
+    int pktZycia = losuj(50,200);
+    int poziom = losuj(1,4);
+    int pktAtakuMin = losuj(1,3);
+    int pktAtakuMax = losuj(3,5);
+
+
+    int losujKlase = losuj(1,2);
+    Postac* postac = NULL;
+    if(losujKlase == 1){
+        cout << "GENERATOR: " << "wylosowano klase Postac" << endl;
+        string nazwa = "PostacX:" + to_string(losuj(1,100000));
+        postac = new Postac(nazwa, pktAtakuMax,  pktAtakuMin,  pktZycia, poziom);
+    }
+    else if(losujKlase == 2){
+        cout << "GENERATOR: " << "wylosowano klase Czarodzieja" << endl;
+        string nazwa = "CzarodziejX:" + to_string(losuj(1,100000));
+        int mana = losuj(1,5);
+        postac = new Czarodziej(nazwa, pktAtakuMax,  pktAtakuMin,  pktZycia, poziom, mana);
+    }
+    else
+    {
+        cout << "GENERATOR: " << "Blad generatora brak takiej klasy" << endl;
+        return NULL;
+    }
+
+     ///tutaj wykorzystanie metody fabrykujace bron...
+     //postac->rekaLewa = metoda fabrykujaca bron....
+     int losujBron = losuj(1,3);
+     cout << "GENERATOR: " << "losujBron: " << losujBron << endl;
+     if(losujBron == 1)
+     {
+
+        //losuje pierwsza bron
+        //metoda fabrykujaca bron....
+         string nazwa = "MieczX:" + to_string(losuj(1,100));
+        int cena = losuj(1,200);
+        int atakMin = losuj(1,4);
+        int atakMax = losuj(4,15);
+        int obrona = losuj(1,5);
+        int wytrzymalosc = losuj(1,100);
+        Przedmiot* p = new Bron(nazwa, cena, atakMin, atakMax, obrona, wytrzymalosc);
+        postac->ustawBronPrawa(p);
+     }
+
+     if(losujBron <= 2)
+     {
+         //losuje druga bronie
+         //metoda fabrykujaca bron....
+         string nazwa = "ToporX:" + to_string(losuj(1,100));
+        int cena = losuj(1,200);
+        int atakMin = losuj(1,4);
+        int atakMax = losuj(4,15);
+        int obrona = losuj(1,5);
+        int wytrzymalosc = losuj(1,100);
+        Przedmiot* p = new Bron(nazwa, cena, atakMin, atakMax, obrona, wytrzymalosc);
+        postac->ustawBronLewa(p);
+     }
+
+
+
+    return postac;
+
+
 }
 
