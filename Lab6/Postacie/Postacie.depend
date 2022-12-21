@@ -104,3 +104,57 @@
 	"Class Model/Postac.h"
 	"Class Model/Przedmiot.h"
 
+1670430489 source:c:\projects\cpp_po_2022-23z\lab6\postacie\class model\bron.cpp
+	"Bron.h"
+
+1670432075 c:\projects\cpp_po_2022-23z\lab6\postacie\class model\bron.h
+	"Przedmiot.h"
+
+1670432101 c:\projects\cpp_po_2022-23z\lab6\postacie\class model\przedmiot.h
+	<iostream>
+	"rodzajPrzedmiotu.h"
+
+1669826583 c:\projects\cpp_po_2022-23z\lab6\postacie\class model\rodzajprzedmiotu.h
+
+1669828193 source:c:\projects\cpp_po_2022-23z\lab6\postacie\class model\plecak.cpp
+	"Plecak.h"
+	<iostream>
+
+1669828023 c:\projects\cpp_po_2022-23z\lab6\postacie\class model\plecak.h
+	"Przedmiot.h"
+	<vector>
+
+1669827380 source:c:\projects\cpp_po_2022-23z\lab6\postacie\class model\przedmiot.cpp
+	"Przedmiot.h"
+
+1669825218 source:c:\projects\cpp_po_2022-23z\lab6\postacie\class model\tarcza.cpp
+	"Tarcza.h"
+
+1669825218 c:\projects\cpp_po_2022-23z\lab6\postacie\class model\tarcza.h
+
+1669825218 source:c:\projects\cpp_po_2022-23z\lab6\postacie\class model\wojownik.cpp
+	"Wojownik.h"
+
+1669825218 c:\projects\cpp_po_2022-23z\lab6\postacie\class model\wojownik.h
+	"Postac.h"
+
+1671638003 c:\projects\cpp_po_2022-23z\lab6\postacie\class model\postac.h
+	"Plecak.h"
+	"Bron.h"
+
+1671637894 source:c:\projects\cpp_po_2022-23z\lab6\postacie\class model\postac.cpp
+	"Postac.h"
+
+1671636868 source:c:\projects\cpp_po_2022-23z\lab6\postacie\main.cpp
+	<iostream>
+	<time.h>
+	"Class Model/Postac.h"
+	"Class Model/Czarodziej.h"
+	"Class Model/Przedmiot.h"
+
+1671637932 source:c:\projects\cpp_po_2022-23z\lab6\postacie\class model\czarodziej.cpp
+	"Czarodziej.h"
+
+1671637960 c:\projects\cpp_po_2022-23z\lab6\postacie\class model\czarodziej.h
+	"Postac.h"
+

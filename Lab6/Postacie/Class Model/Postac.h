@@ -21,7 +21,7 @@ public:
 	Postac(string nazwa, int pktAtakuMax, int pktAtakuMin, int pktZycia, int poziom);
 	bool czyZyje();
 	void dodajDoPlecaka(Przedmiot* p);
-	void PokazStatystykiPostaci();
+	virtual void PokazStatystykiPostaci();
 	void przedstawSie();
 	void przywitajSieZInnaOsoba(Postac* osoba);
 	void ustawBronLewa(Przedmiot* przedmiot);
@@ -32,13 +32,14 @@ public:
 
 	string  pobierzNazwe();
 
+	virtual int atakZaawansowany();
+
 protected:
 	int obliczPktAtaku();
 	void przyjmijObrazenia(int pktObrazen);
 
-	string generujPrzywitanie();
 
-private:
+	string generujPrzywitanie();
 	string nazwa;
 	int pktAtakuMax;
 	int pktAtakuMin;
@@ -47,6 +48,10 @@ private:
 	int poziom;
 	Przedmiot* rekaLewa;
 	Przedmiot* rekaPrawa;
+
+	bool czyTrafion(int poziomPrzeciwnika);
+
+private:
 
 };
 #endif // !defined(EA_5D440618_964F_483f_AC68_EDFCD96A6091__INCLUDED_)

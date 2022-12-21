@@ -12,10 +12,18 @@
 
 class Czarodziej : public Postac
 {
-
+    int mana;
 public:
 	Czarodziej();
+
+	Czarodziej(string nazwa, int pktAtakuMax, int pktAtakuMin, int pktZycia, int poziom, int mana);
+
+
 	virtual ~Czarodziej();
+
+	int atakZaawansowany();
+
+	void PokazStatystykiPostaci();
 
 };
 #endif // !defined(EA_E597636A_547D_4863_9794_0098113B9DFD__INCLUDED_)

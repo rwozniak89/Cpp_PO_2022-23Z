@@ -4,6 +4,7 @@
 
 
 #include "Class Model/Postac.h"
+#include "Class Model/Czarodziej.h"
 
 #include "Class Model/Przedmiot.h"
 
@@ -17,7 +18,7 @@ int main()
     cout << "PostacieLab5!" << endl;
 
 
-    Postac* postac1 = new Postac("Zbyszek", 5, 4, 50, 1);
+    Postac* postac1 = new Postac("Zbyszek", 5, 4, 100, 1);
     postac1->przedstawSie();
     postac1->PokazStatystykiPostaci();
 
@@ -49,7 +50,7 @@ int main()
 
     //bron traktowana jako przemiot //brak virtual
     b1->OpiszSie();
-    //bron traktowana jako bron //brak virtual
+    //bron traktowana jako bron ----
     Bron* b1a = (Bron*)b1;
     ((Bron*)b1)->OpiszSie();
     b1a->OpiszSie();
@@ -72,7 +73,7 @@ int main()
 
     cout << "\nWalka##################" << endl;
 
-    Postac* postac2 = new Postac("Piotrek", 6, 5, 40, 2);
+    Postac* postac2 = new Czarodziej("Magik", 6, 5, 80, 2, 5);
     postac2->ustawBronLewa(b2);
     postac2->ustawBronPrawa(p3);
 

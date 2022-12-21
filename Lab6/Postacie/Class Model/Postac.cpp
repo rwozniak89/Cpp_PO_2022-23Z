@@ -64,7 +64,7 @@ void Postac::dodajDoPlecaka(Przedmiot* p){
 
 void Postac::PokazStatystykiPostaci(){
 
-    cout << "###" << this->nazwa
+    cout << "###(P)" << this->nazwa
     << " (Statystyki): pktAtakuMax: " << this->pktAtakuMax
      << ", pktAtakuMin: " << this->pktAtakuMin
       << ", pktZycia: " << this->pktZycia
@@ -93,16 +93,26 @@ void Postac::zaatakuj(Postac* przeciwnik){
 
     cout <<this->nazwa << ": "<< "Rozpoczyna atak na przeciwnika " << przeciwnik->nazwa << " !" << endl;
 
-    int obrazenia = obliczPktAtaku();
 
-    przeciwnik->przyjmijObrazenia(obrazenia);
-
-
+    if( czyTrafion(przeciwnik->poziom) )//if(czyTrafion(przeciwnik->poziom) == true)
+    {
+        int obrazenia = obliczPktAtaku();
+        if(rand() % 2 == 0){
+            obrazenia += atakZaawansowany();
+        }
+        przeciwnik->przyjmijObrazenia(obrazenia);
+    }
+    else
+    {
+        cout <<"%%%" <<this->nazwa << ": "<< "PUDLO !!!" << przeciwnik->nazwa << " !" << endl;
+    }
 
     cout <<this->nazwa << ": "<< "Konczy atak na przeciwnika " << przeciwnik->nazwa << " !" << endl;
 }
 
 int Postac::obliczPktAtaku(){
+
+    cout<< this->nazwa << ": "<< "Uzywa ataku podstawowego" << endl;
 
     int sumaPkt = 0;
 
@@ -133,7 +143,7 @@ int Postac::obliczPktAtaku(){
         }
     }
 
-    cout << "###" << this->nazwa << ": wygnerowano pktAtaku: " << sumaPkt << endl;
+    cout << "###" << this->nazwa << ": wygenerowano pktAtaku: " << sumaPkt << endl;
     return sumaPkt;
 
 }
@@ -191,3 +201,29 @@ void Postac::zaprosDoWalki(Postac* osoba){
      this->PokazStatystykiPostaci();
      osoba->PokazStatystykiPostaci();
 }
+
+
+
+int Postac::atakZaawansowany()
+{
+    cout <<this->nazwa << ": "<< "Brak ataku zaawansowanego - to jest podstawowa kalsa Postac" << endl;
+    return 0;
+
+}
+
+bool Postac::czyTrafion(int poziomPrzeciwnika){
+
+        int los = (rand() % 100) + 1;
+
+        if(this->poziom > poziomPrzeciwnika && los >= 25){
+            return true;
+        }
+        else if(this->poziom == poziomPrzeciwnika && los >= 50){
+            return true;
+        }
+        else if(this->poziom < poziomPrzeciwnika && los >= 66){
+            return true;
+        }
+        return false;
+}
+
