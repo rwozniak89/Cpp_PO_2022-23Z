@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1671390882 source:c:\projects\cpp_po_2022-23z\lab4\test\main.c
+	<stdio.h>
+	<stdlib.h>
+
