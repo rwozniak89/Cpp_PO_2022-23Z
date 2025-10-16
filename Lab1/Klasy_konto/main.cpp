@@ -13,7 +13,8 @@ g.	Konstruktor
 h.	Wywolanie konstrukotow i destrukora
 */
 
-class Konto {
+class Konto
+{
 
 private:
     int stan = -1;
@@ -21,7 +22,8 @@ private:
 
 public:
 
-    Konto(){
+    Konto()
+    {
         cout << "uruchomienie konstrukotra nr 1" << endl;
         stan = 0;
         waluta = "PLN";
@@ -34,19 +36,22 @@ public:
         waluta = "PLN";
     }*/
 
-    Konto(int stan): Konto(){ //check inline contructors...
+    Konto(int startowyStanKonta): Konto()  //check inline contructors...
+    {
         cout << "uruchomienie konstrukotra nr 2" << endl;
-        this->stan = stan;
+        stan = startowyStanKonta;
     }
 
-     Konto(int stan, string waluta) {
+    Konto(int stan, string waluta)
+    {
         cout << "uruchomienie konstrukotra nr 3" << endl;
         this->stan = stan;
         this->waluta = waluta;
     }
 
 
-    void wplac(int x){
+    void wplac(int x)
+    {
         if (x > 0)
         {
             stan = stan + x; // stan += x;
@@ -54,28 +59,36 @@ public:
             return;
         }
         //else {
-            cout << "kwota mniejsza lub rowna 0, brak wplaty!!!" << endl;
+        cout << "kwota mniejsza lub rowna 0, brak wplaty!!!" << endl;
         //}
     }
 
-    int wyplac(int x){
-        if( x > 0 && x < stan){
-            stan = stan - x;
-            cout << "wyplacono " << x << endl;
-            return x;
+    int wyplac(int x)
+    {
+        if( x > 0 ) //&& x < stan){
+        {
+            if(x < stan)
+            {
+                stan = stan - x;
+                cout << "wyplacono " << x << endl;
+                return x;
+            }
         }
 
         cout << "kwota mniejsza lub rowna 0 lub mniejsza niz stan konta, brak wyplaty!!!" << endl;
         return 0;
     }
 
-    int pobierzStan(){
+    int pobierzStan()
+    {
         cout << "...wywolanie metody pobierzStan()" << endl; // "\n";
         return stan;
     }
 
-    void wyswietlStanIWalute(){
+    void wyswietlStanIWalute()
+    {
         cout << "Stan konta: " << stan << " " << waluta << "\n";
+
     }
 
 };
@@ -93,7 +106,7 @@ int main()
     cout << mojeKonto.pobierzStan() << endl;
     mojeKonto.wplac(-100);
     mojeKonto.wplac(500);
-    mojeKonto.wyplac(1500);
+    int portfelRadka = mojeKonto.wyplac(1500);
     mojeKonto.wyswietlStanIWalute();
     int wyplataZKonta = mojeKonto.wyplac(100);
     mojeKonto.wyswietlStanIWalute();
