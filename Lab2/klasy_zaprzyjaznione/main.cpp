@@ -19,11 +19,12 @@ public:
 
     }
     int getKasa() {
-        cout << kasa << endl;
+        cout << "Kasa uzytkownika " << nazwa << " to: " << kasa << endl;
         return kasa;
     }
 
     int wplacKaseAdamowi(int nowaKasa) {
+        cout << "Wplacono uzytkownikowi " << nazwa << "kwote: " << nowaKasa << endl;
         kasa += nowaKasa;
 
     }
@@ -33,15 +34,21 @@ public:
 
 class Bartek {
 
+    string nazwa = "Bartek";
+
 public:
     void setKasa(Adam* obiekt, int nowaWartosc)
     {
         obiekt->kasa = nowaWartosc;
+        cout << this->nazwa << " ustalil wysokosc konta uzytkownika " << obiekt->nazwa << " na poziomie " << obiekt->kasa << endl;
+
     }
 
     void dodaj(Adam* obiekt, int wartosc)
     {
         obiekt->wplacKaseAdamowi(wartosc);
+        cout << this->nazwa << " ustalil wysokosc konta uzytkownika " << obiekt->nazwa << " na poziomie " << obiekt->kasa << endl;
+
     }
 
 
@@ -49,6 +56,8 @@ public:
 
 
 class Czarek {
+
+    string nazwa = "Czarek";
 
 public:
 
@@ -61,11 +70,13 @@ public:
     void dodaj(Adam* obiekt, int wartosc)
     {
         obiekt->wplacKaseAdamowi(wartosc);
+        cout << this->nazwa << " ustalil wysokosc konta uzytkownika " << obiekt->nazwa << " na poziomie " << obiekt->getKasa() << endl;
+        //cout << this->nazwa << "ustalil wysokosc konta uzytkownika " << obiekt->nazwa << " na poziomie " << obiekt->kasa << endl;
     }
 
     void przywitajSie(Adam* obiekt, string komunikat)
     {
-        cout << komunikat << " " << obiekt->nazwa << endl;
+        cout << this->nazwa  << " powiedzial: "<<komunikat << " do uzytkownika " << obiekt->nazwa << endl;
 
     }
 
@@ -78,9 +89,11 @@ int main()
 {
     cout << "Klasy zaprzyjaznione!" << endl;
 
+    cout << "Powolanie do zycia!" << endl;
     Adam* a = new Adam();
     Bartek* b = new Bartek();
     Czarek* c = new Czarek();
+
 
     a->getKasa();
     b->setKasa(a, 15);
