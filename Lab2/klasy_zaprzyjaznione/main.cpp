@@ -4,6 +4,7 @@ using namespace std;
 
 
 class Adam {
+
 friend class Bartek;
 
 public:
@@ -25,7 +26,7 @@ public:
 
     int wplacKaseAdamowi(int nowaKasa) {
         cout << "Wplacono uzytkownikowi " << nazwa << "kwote: " << nowaKasa << endl;
-        kasa += nowaKasa;
+        this->kasa += nowaKasa;
 
     }
 
@@ -33,7 +34,7 @@ public:
 
 
 class Bartek {
-
+//friend class Adam;
     string nazwa = "Bartek";
 
 public:
@@ -46,6 +47,7 @@ public:
 
     void dodaj(Adam* obiekt, int wartosc)
     {
+        //obiekt->kasa += wartosc;
         obiekt->wplacKaseAdamowi(wartosc);
         cout << this->nazwa << " ustalil wysokosc konta uzytkownika " << obiekt->nazwa << " na poziomie " << obiekt->kasa << endl;
 
@@ -69,8 +71,8 @@ public:
 
     void dodaj(Adam* obiekt, int wartosc)
     {
-        obiekt->wplacKaseAdamowi(wartosc);
-        cout << this->nazwa << " ustalil wysokosc konta uzytkownika " << obiekt->nazwa << " na poziomie " << obiekt->getKasa() << endl;
+        //obiekt->wplacKaseAdamowi(wartosc);
+        //cout << this->nazwa << " ustalil wysokosc konta uzytkownika " << obiekt->nazwa << " na poziomie " << obiekt->getKasa() << endl;
         //cout << this->nazwa << "ustalil wysokosc konta uzytkownika " << obiekt->nazwa << " na poziomie " << obiekt->kasa << endl;
     }
 
@@ -90,26 +92,28 @@ int main()
     cout << "Klasy zaprzyjaznione!" << endl;
 
     cout << "Powolanie do zycia!" << endl;
-    Adam* a = new Adam();
-    Bartek* b = new Bartek();
+    Adam* adam  = new Adam();
+    Bartek* bartek = new Bartek();
     Czarek* c = new Czarek();
 
 
-    a->getKasa();
-    b->setKasa(a, 15);
+    adam->getKasa();
+    bartek->setKasa(adam, 15);
 
-    a->getKasa();
+    adam->getKasa();
+    cout << "wplata od Bartka" << endl;
+    bartek->dodaj(adam, 10);
+    cout << "wplata od Bartka2" << endl;
+    adam->getKasa();
 
-    b->dodaj(a, 10);
-    a->getKasa();
+    //cout << "wplata od Czarka" << endl;
+    //c->dodaj(adam, 100);
+    //adam->getKasa();
 
-    c->dodaj(a, 100);
-    a->getKasa();
+    //adam->wplacKaseAdamowi(1000);
+    //adam->getKasa();
 
-    a->wplacKaseAdamowi(1000);
-    a->getKasa();
-
-    c->przywitajSie(a, "Witaj!" );
+    //c->przywitajSie(adam, "Witaj!" );
 
 
     return 0;

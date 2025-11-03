@@ -20,6 +20,7 @@ class Pojazd
 {
 public:
     string nazwa;
+    int stanPaliwa;
     void metodaPubliczna(){
         cout << "Pojazd: metodaPubliczna" << endl;
     }
@@ -145,6 +146,13 @@ public:
         cout << "SilnikElektryczny " << nazwa <<": brak enegrii!" << endl;
         return false;
     }
+
+
+    void zwiekszMocPojazdu()
+    {
+
+        cout << "moc zwiekszona!!!" << endl;
+    }
 };
 
 
@@ -236,32 +244,37 @@ int main()
     //samochod->setNazwa("samochod 1");
     samochod->metodaPubliczna();
     samochod->jedz();
-    samochod->jedz();
-    samochod->jedz();
-    samochod->jedz();
+    //samochod->jedz();
+    //samochod->jedz();
+    //samochod->jedz();
     samochod->dajSygnal();
     samochod->dajSygnalZVirtual();
 
 
-    cout << "############ Samochod jako Pojazd" << endl<< endl;
+    //cout << "############ Samochod jako Pojazd" << endl<< endl;
     //wywo³anie metody dla referencji spowoduje zachowanie odpowiednie dla pe³nego typu obiektu wywo³ywanego
     Pojazd* samochod2 = new Samochod("samochod nr2", "Opel Astra");
-    //samochod2->setNazwa("samochod 2");
-    samochod2->metodaPubliczna();
-    ((Samochod*)samochod2)->jedz();
-    //samochod2->jedz();
+    ////samochod2->setNazwa("samochod 2");
+    //samochod2->metodaPubliczna();
+    //((Samochod*)samochod2)->jedz();
+    ////samochod2->jedz();
     samochod2->dajSygnal();
     samochod2->dajSygnalZVirtual();
+    ((Samochod*)samochod2) ->dajSygnal();
+
+
+    //samochod->uruchomSilnik();
+    //samochod->silniczek->zwiekszMocPojazdu();
 
 
     //a->
-    a->obslugaInkluzyjnaDoPorownywaniaNazw(a);
-    a->obslugaInkluzyjnaDoPorownywaniaNazw(samochod);
-    a->obslugaInkluzyjnaDoPorownywaniaNazw(samochod2);
-    //samochod2->setNazwa("a");
-    //samochod->setNazwa("a");
-    samochod->obslugaInkluzyjnaDoPorownywaniaNazw(samochod2);
-
+    //a->obslugaInkluzyjnaDoPorownywaniaNazw(a);
+    //a->obslugaInkluzyjnaDoPorownywaniaNazw(samochod);
+    //a->obslugaInkluzyjnaDoPorownywaniaNazw(samochod2);
+    ////samochod2->setNazwa("a");
+    ////samochod->setNazwa("a");
+    //samochod->obslugaInkluzyjnaDoPorownywaniaNazw(samochod2);
+/*
 
     Pojazd* tablica[] = { a, samochod, samochod2 };
     for(int i=0; i<3; i++)
@@ -278,7 +291,7 @@ int main()
         tablica2[i]->dajSygnal();
         tablica2[i]->dajSygnalZVirtual();
     }
-
+*/
 
     return 0;
 }
