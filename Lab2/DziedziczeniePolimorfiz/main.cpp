@@ -48,10 +48,10 @@ public:
     }
 
     void dajSygnal(){
-        cout << "Pojazd " << nazwa <<": dajSygnal: bipbip" << endl;
+        cout << "" << nazwa <<": dajSygnal: bipbip, wywoluje metode z poziomu Pojazdu" << endl;
     }
     virtual void dajSygnalZVirtual(){
-        cout << "Pojazd " << nazwa <<": dajSygnalZVirtual: bipbip " << endl;
+        cout << "" << nazwa <<": dajSygnalZVirtual: bipbip, wywoluje metode z poziomu Pojazdu " << endl;
     }
 
     void obslugaInkluzyjnaDoPorownywaniaNazw(Pojazd* pojazdDoPorowania){
@@ -213,10 +213,10 @@ public:
 
 
     void dajSygnal(){
-        cout << "Samochod " << Pojazd::nazwa <<": dajSygnal: brumbrum" << endl;
+        cout << "" << Pojazd::nazwa <<": dajSygnal: brumbrum, wywoluje metode z poziomu Samochod" << endl;
     }
     void dajSygnalZVirtual(){
-        cout << "Samochod " << Pojazd::nazwa <<": dajSygnalZVirtual: brumbrum " << endl;
+        cout << "" << Pojazd::nazwa <<": dajSygnalZVirtual: brumbrum, wywoluje metode z poziomu Samochod " << endl;
     }
 
 
@@ -230,7 +230,7 @@ int main()
     cout << "Dziedziczenie - Polimorfiz!" << endl;
 
     cout << "############ Pojazd" << endl<< endl;
-    Pojazd* a = new Pojazd("Fiacik"); /// Pojazd a;
+    Pojazd* a = new Pojazd("A"); /// Pojazd a;
     //a->setNazwa("Fiat");
     a->metodaPubliczna();
     //a->metodaChroniona();
@@ -240,7 +240,7 @@ int main()
     a->dajSygnalZVirtual();
 
     cout << "############ Samochod" << endl<< endl;
-    Samochod* samochod = new Samochod("Form Mondeo");
+    Samochod* samochod = new Samochod("Samochod nr1", "Ford" );
     //samochod->setNazwa("samochod 1");
     samochod->metodaPubliczna();
     samochod->jedz();
@@ -253,7 +253,7 @@ int main()
 
     //cout << "############ Samochod jako Pojazd" << endl<< endl;
     //wywo³anie metody dla referencji spowoduje zachowanie odpowiednie dla pe³nego typu obiektu wywo³ywanego
-    Pojazd* samochod2 = new Samochod("samochod nr2", "Opel Astra");
+    Pojazd* samochod2 = new Samochod("Samochod nr2", "Opel Astra");
     ////samochod2->setNazwa("samochod 2");
     //samochod2->metodaPubliczna();
     //((Samochod*)samochod2)->jedz();
@@ -274,24 +274,28 @@ int main()
     ////samochod2->setNazwa("a");
     ////samochod->setNazwa("a");
     //samochod->obslugaInkluzyjnaDoPorownywaniaNazw(samochod2);
-/*
 
-    Pojazd* tablica[] = { a, samochod, samochod2 };
-    for(int i=0; i<3; i++)
+    cout << endl;
+
+    //tankuj pojazd, inne wywolanie metody tankuj zaleznie od rodzaju pozjadu, elektryczny laduje baterie, spalinowy paliwo
+    //tutaj pracownik stacji wywolywalby ta sama metode tankuj dla kazdego amochodu (ogolnie pojazdu), a zachowanie byloby inne...
+    Pojazd* tablica[] = { a, samochod, samochod2, a };
+    for(int i=0; i<4; i++)
     {
-        tablica[i]->nazwa;
-        tablica[i]->dajSygnal();
+        //tablica[i]->nazwa;
+        //tablica[i]->dajSygnal();
         tablica[i]->dajSygnalZVirtual();
     }
 
+cout << endl;
     Samochod* tablica2[] = { (Samochod*)a, samochod, (Samochod*)samochod2 };
     for(int i=0; i<3; i++)
     {
-        tablica2[i]->Pojazd::nazwa;
-        tablica2[i]->dajSygnal();
+        //tablica2[i]->Pojazd::nazwa;
+        //tablica2[i]->dajSygnal();
         tablica2[i]->dajSygnalZVirtual();
     }
-*/
+
 
     return 0;
 }
