@@ -253,7 +253,7 @@ int main()
 
     //cout << "############ Samochod jako Pojazd" << endl<< endl;
     //wywo³anie metody dla referencji spowoduje zachowanie odpowiednie dla pe³nego typu obiektu wywo³ywanego
-    Pojazd* samochod2 = new Samochod("Samochod nr2", "Opel Astra");
+    Pojazd* samochod2 = new Samochod("Samochod nr2xxx", "Opel Astra");
     ////samochod2->setNazwa("samochod 2");
     //samochod2->metodaPubliczna();
     //((Samochod*)samochod2)->jedz();
