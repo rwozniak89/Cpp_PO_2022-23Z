@@ -16,6 +16,21 @@ public:
         cout << "Jestem " << " " << imie << " " << nazwisko << ", mam lat " << wiek << endl;
     }
 
+    //Osoba(string podajImie, string podajNazwisko, int podajWiek){
+    //    cout << "uruchomienie konstruktora z parametrem" << endl;
+    //    imie = podajImie;
+    //    nazwisko = podajNazwisko;
+    //    wiek = podajWiek;
+    //}
+
+    Osoba(string imie, string nazwisko, int wiek){
+        cout << "uruchomienie konstruktora z parametrem" << endl;
+        this->imie = imie; // <=> (*this).imie = imie;
+        this->nazwisko = nazwisko;
+        this->wiek = wiek;
+
+    }
+
     Osoba(string podajImie){
         cout << "uruchomienie konstruktora z parametrem" << endl;
         imie = podajImie;
@@ -50,6 +65,11 @@ int main()
     kolega2.wiek = 30;
     kolega2.przedstawSie();
     //cout << "Jestem " << kolega2.imie << kolega2.nazwisko << endl;
+
+    Osoba kolega4("Radek", "Woz", 36);
+    kolega4.przedstawSie();
+    kolega4.przedstawSie();
+    kolega2.przedstawSie();
 
     return 0;
 }

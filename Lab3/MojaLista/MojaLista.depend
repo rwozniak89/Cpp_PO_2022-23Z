@@ -21,3 +21,19 @@
 
 1668533368 c:\projects\cpp_po_2022-23z_execise\mojalista\include\mylist.h
 
+1762180062 source:c:\projects\cpp_po_2022-23z\lab3\mojalista\main.cpp
+	<iostream>
+	"List.h"
+
+1762180062 c:\projects\cpp_po_2022-23z\lab3\mojalista\include\list.h
+	"ListElement.h"
+
+1762180062 c:\projects\cpp_po_2022-23z\lab3\mojalista\include\listelement.h
+
+1762180062 source:c:\projects\cpp_po_2022-23z\lab3\mojalista\src\list.cpp
+	"List.h"
+	<iostream>
+
+1762180062 source:c:\projects\cpp_po_2022-23z\lab3\mojalista\src\listelement.cpp
+	"ListElement.h"
+

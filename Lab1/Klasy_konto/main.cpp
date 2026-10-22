@@ -17,7 +17,7 @@ class Konto
 {
 
 private:
-    int stan = -1;
+    int stan = 500;
     string waluta = "brak";
 
 public:
@@ -25,7 +25,7 @@ public:
     Konto()
     {
         cout << "uruchomienie konstrukotra nr 1" << endl;
-        stan = 0;
+        stan = 500;
         waluta = "PLN";
     }
 
@@ -39,14 +39,27 @@ public:
     Konto(int startowyStanKonta): Konto()  //check inline contructors...
     {
         cout << "uruchomienie konstrukotra nr 2" << endl;
-        stan = startowyStanKonta;
+
+        if(startowyStanKonta > 0) {
+          stan = startowyStanKonta;
+          stan++;
+        }
+        else{
+            stan = 100;
+        }
+
     }
 
-    Konto(int stan, string waluta)
+    Konto(int stan, string waluta) : Konto( stan)
     {
         cout << "uruchomienie konstrukotra nr 3" << endl;
-        this->stan = stan;
+        //this->stan = stan;
         this->waluta = waluta;
+    }
+
+    Konto (int x, string y, int z){
+
+        ///
     }
 
 
@@ -56,10 +69,11 @@ public:
         {
             stan = stan + x; // stan += x;
             cout << "wplacono " << x << endl;
+            wyswietlStanIWalute(); //cout << "Stan konta: " << stan << " " << waluta << "\n";
             return;
         }
         //else {
-        cout << "kwota mniejsza lub rowna 0, brak wplaty!!!" << endl;
+            cout << "kwota mniejsza lub rowna 0, brak wplaty!!!" << endl;
         //}
     }
 

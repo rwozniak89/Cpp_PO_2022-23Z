@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1760547899 source:c:\projects\cpp_po_2022-23z\lab1\klasy_wstep\main.cpp
+1791992002 source:c:\projects\cpp_po_2022-23z\lab1\klasy_wstep\main.cpp
 	<iostream>
 	"Persona.h"
 
-1760547899 source:c:\projects\cpp_po_2022-23z\lab1\klasy_wstep\src\persona.cpp
+1762180062 source:c:\projects\cpp_po_2022-23z\lab1\klasy_wstep\src\persona.cpp
 	"Persona.h"
 
-1760547899 c:\projects\cpp_po_2022-23z\lab1\klasy_wstep\include\persona.h
+1762180062 c:\projects\cpp_po_2022-23z\lab1\klasy_wstep\include\persona.h
 	<iostream>
 

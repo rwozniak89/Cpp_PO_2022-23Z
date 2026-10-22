@@ -2,14 +2,14 @@
 
 using namespace std;
 
-//Utwórz klasê Pojazd
+//UtwÃ³rz klasÃª Pojazd
 //z konstruktorami bezparametrowym i parametrowym
 //z atrybutami (+nazwa, #vin, -rocznik),
-//z metodami pokazaæ dostêpnoœæ:
+//z metodami pokazaÃ¦ dostÃªpnoÅ“Ã¦:
 //a)	+metodaPubliczna
 //b)	#metodaChroniona
 //c)	-metodaPrywatna
-//+uzyjMetod() …. Publi, chron, prywat
+//+uzyjMetod() â€¦. Publi, chron, prywat
 //
 //+dajSygnal()
 //+dajSygnalZVirtual()
@@ -229,6 +229,7 @@ int main()
 {
     cout << "Dziedziczenie - Polimorfiz!" << endl;
 
+
     cout << "############ Pojazd" << endl<< endl;
     Pojazd* a = new Pojazd("A"); /// Pojazd a;
     //a->setNazwa("Fiat");
@@ -250,9 +251,16 @@ int main()
     samochod->dajSygnal();
     samochod->dajSygnalZVirtual();
 
+    cout << "############ Samochod jako Pojazd" << endl<< endl;
+
+
+    //Owca* zwierze = new Wilk(); // przykÅ‚ad obrazowy: Zwierze jest wilkiem w owcej skÃ³rze!
+    Pojazd* samochodzik = new Samochod("Samochodzik", "BMW");
+    samochodzik->dajSygnal();
+    samochodzik->dajSygnalZVirtual();
 
     //cout << "############ Samochod jako Pojazd" << endl<< endl;
-    //wywo³anie metody dla referencji spowoduje zachowanie odpowiednie dla pe³nego typu obiektu wywo³ywanego
+    //wywoÂ³anie metody dla referencji spowoduje zachowanie odpowiednie dla peÂ³nego typu obiektu wywoÂ³ywanego
     Pojazd* samochod2 = new Samochod("Samochod nr2xxx", "Opel Astra");
     ////samochod2->setNazwa("samochod 2");
     //samochod2->metodaPubliczna();
@@ -296,6 +304,9 @@ cout << endl;
         tablica2[i]->dajSygnalZVirtual();
     }
 
+
+    class Pojazd* samochod33 = new Samochod("Samochod nr2xxx", "Opel Astra");
+//    Pojazd samochod34 = new Samochod("Samochod nr2xxx", "Opel Astra");
 
     return 0;
 }
