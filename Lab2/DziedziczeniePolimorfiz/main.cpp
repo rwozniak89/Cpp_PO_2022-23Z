@@ -251,13 +251,14 @@ int main()
     samochod->dajSygnal();
     samochod->dajSygnalZVirtual();
 
-    cout << "############ Samochod jako Pojazd" << endl<< endl;
+    cout << "!!!!!!!!!############ Samochod jako Pojazd" << endl<< endl;
 
 
     //Owca* zwierze = new Wilk(); // przykład obrazowy: Zwierze jest wilkiem w owcej skórze!
     Pojazd* samochodzik = new Samochod("Samochodzik", "BMW");
     samochodzik->dajSygnal();
     samochodzik->dajSygnalZVirtual();
+    samochodzik->
 
     //cout << "############ Samochod jako Pojazd" << endl<< endl;
     //wywo³anie metody dla referencji spowoduje zachowanie odpowiednie dla pe³nego typu obiektu wywo³ywanego

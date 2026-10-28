@@ -29,3 +29,8 @@ void Zwierze::dajGlos()
 {
     cout << this->nazwa << ": *ogolny odglos zwierzecia*" << endl;
 }
+
+void Zwierze::dajRyk()
+{
+    cout << this->nazwa << ": Rycze pipii!" << endl;
+}

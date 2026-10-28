@@ -31,3 +31,8 @@ void Owca::dajGlos()
 {
     cout << this->nazwa << ": Beeee! Meeee!" << endl;
 }
+
+void Owca::dajRyk()
+{
+    cout << this->nazwa << ": Rycze BEEEEEEEEEEEEEEEEEEEEE!" << endl;
+}

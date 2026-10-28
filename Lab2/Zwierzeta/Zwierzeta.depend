@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1793206251 source:c:\projects\cpp_po_2022-23z\lab2\zwierzeta\main.cpp
+1793207160 source:c:\projects\cpp_po_2022-23z\lab2\zwierzeta\main.cpp
 	<iostream>
 	"Organizm.h"
 	"Zwierze.h"
@@ -13,15 +13,27 @@
 1793205323 c:\projects\cpp_po_2022-23z\lab2\zwierzeta\include\organizm.h
 	<iostream>
 
-1793206237 c:\projects\cpp_po_2022-23z\lab2\zwierzeta\include\zwierze.h
+1793207064 c:\projects\cpp_po_2022-23z\lab2\zwierzeta\include\zwierze.h
 	<iostream>
 	"Organizm.h"
 
-1793206245 c:\projects\cpp_po_2022-23z\lab2\zwierzeta\include\owca.h
+1793207124 c:\projects\cpp_po_2022-23z\lab2\zwierzeta\include\owca.h
 	<iostream>
 	"Zwierze.h"
 
-1793206247 c:\projects\cpp_po_2022-23z\lab2\zwierzeta\include\wilkx.h
+1793207060 c:\projects\cpp_po_2022-23z\lab2\zwierzeta\include\wilkx.h
 	<iostream>
 	"Owca.h"
+
+1793207093 source:c:\projects\cpp_po_2022-23z\lab2\zwierzeta\src\owca.cpp
+	"Owca.h"
+	<iostream>
+
+1793207137 source:c:\projects\cpp_po_2022-23z\lab2\zwierzeta\src\wilkx.cpp
+	"WilkX.h"
+	<iostream>
+
+1793207129 source:c:\projects\cpp_po_2022-23z\lab2\zwierzeta\src\zwierze.cpp
+	"Zwierze.h"
+	<iostream>
 

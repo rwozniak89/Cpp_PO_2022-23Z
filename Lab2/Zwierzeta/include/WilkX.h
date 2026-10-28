@@ -16,6 +16,7 @@ class WilkX : public Owca
 
         virtual void przedstawSie();
         virtual void dajGlos();
+        virtual void dajRyk();
 
         void zjedzOwce(Owca& owca);
         int ileZjedzonychOwiec();

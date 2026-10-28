@@ -32,6 +32,11 @@ void WilkX::dajGlos()
     cout << this->nazwa << ": Auuuuuu! Grrrrrr!" << endl;
 }
 
+void WilkX::dajRyk()
+{
+    cout << this->nazwa << ": Rycze AUUUUUUUUUUUUU!" << endl;
+}
+
 void WilkX::zjedzOwce(Owca& owca)
 {
     this->zjedzoneOwce++;

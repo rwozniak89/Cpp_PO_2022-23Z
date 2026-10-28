@@ -15,6 +15,7 @@ class Zwierze : public Organizm
 
         virtual void przedstawSie();
         virtual void dajGlos();
+        virtual void dajRyk();
 
     protected:
         string nazwa;

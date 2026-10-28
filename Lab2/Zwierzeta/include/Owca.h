@@ -15,6 +15,7 @@ class Owca : public Zwierze
 
         virtual void przedstawSie();
         virtual void dajGlos();
+        virtual void dajRyk();
 
     protected:
         double welna; // ilosc welny w kg
