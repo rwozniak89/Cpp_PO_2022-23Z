@@ -75,6 +75,7 @@ int main()
         cout << endl;
     }
 
+    //((Organizm*)wilczek3)->
 
     return 0;
 }

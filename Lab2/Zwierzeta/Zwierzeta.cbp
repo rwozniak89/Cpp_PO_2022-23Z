@@ -35,8 +35,14 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Organizm.h" />
+		<Unit filename="include/Owca.h" />
+		<Unit filename="include/WilkX.h" />
+		<Unit filename="include/Zwierze.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Organizm.cpp" />
+		<Unit filename="src/Owca.cpp" />
+		<Unit filename="src/WilkX.cpp" />
+		<Unit filename="src/Zwierze.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
