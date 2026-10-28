@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1793205094 source:c:\projects\cpp_po_2022-23z\lab2\zwierzeta\main.cpp
+	<iostream>
+
+1793205353 source:c:\projects\cpp_po_2022-23z\lab2\zwierzeta\src\organizm.cpp
+	"Organizm.h"
+	<iostream>
+
+1793205323 c:\projects\cpp_po_2022-23z\lab2\zwierzeta\include\organizm.h
+	<iostream>
+
