@@ -1,6 +1,10 @@
 # depslib dependency file v1.0
-1793205094 source:c:\projects\cpp_po_2022-23z\lab2\zwierzeta\main.cpp
+1793206251 source:c:\projects\cpp_po_2022-23z\lab2\zwierzeta\main.cpp
 	<iostream>
+	"Organizm.h"
+	"Zwierze.h"
+	"Owca.h"
+	"WilkX.h"
 
 1793205353 source:c:\projects\cpp_po_2022-23z\lab2\zwierzeta\src\organizm.cpp
 	"Organizm.h"
@@ -8,4 +12,16 @@
 
 1793205323 c:\projects\cpp_po_2022-23z\lab2\zwierzeta\include\organizm.h
 	<iostream>
+
+1793206237 c:\projects\cpp_po_2022-23z\lab2\zwierzeta\include\zwierze.h
+	<iostream>
+	"Organizm.h"
+
+1793206245 c:\projects\cpp_po_2022-23z\lab2\zwierzeta\include\owca.h
+	<iostream>
+	"Zwierze.h"
+
+1793206247 c:\projects\cpp_po_2022-23z\lab2\zwierzeta\include\wilkx.h
+	<iostream>
+	"Owca.h"
 
